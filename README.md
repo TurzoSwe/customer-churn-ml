@@ -1,137 +1,102 @@
-#  Customer Churn Prediction (Machine Learning Project)
+📊 Customer Churn Prediction (Machine Learning Project)
 
-##  Overview
+. Overview
 
-This project focuses on predicting customer churn using machine learning techniques. The goal is to identify customers who are likely to leave a telecom service so that businesses can take preventive actions.
-
----
-
-## 📁 Dataset
-
-* Dataset: Telco Customer Churn Dataset
-* Contains customer information such as:
-
-  * Demographics
-  * Services subscribed
-  * Account information
-  * Churn status (Yes/No)
+This project focuses on predicting customer churn using machine learning techniques. Customer churn refers to when customers stop using a company's service. By analyzing customer data, we aim to identify patterns and build a model that can predict which customers are likely to leave.
 
 ---
 
-##  Data Preprocessing
+📁 Project Structure
 
-* Handled data type issues (e.g., `TotalCharges` converted to numeric)
-* Checked and confirmed no missing values
-* Dropped unnecessary columns (e.g., `customerID`)
-* Encoded categorical variables:
-
-  * Binary encoding (Yes/No → 1/0)
-  * One-hot encoding for multi-category features
-
----
-
-##  Feature Engineering
-
-* Converted all features into numeric format
-* Prepared dataset for machine learning models
+customer-churn-ml/
+│
+├── data/
+│   └── churn.csv
+│
+├── notebooks/
+│   └── analysis.ipynb
+│
+├── README.md
 
 ---
 
-##  Models Used
+📊 Dataset
 
-###  Logistic Regression
-
-* Used as a baseline model
-* Applied `class_weight="balanced"` to handle class imbalance
-
-###  Random Forest Classifier
-
-* Used for improved performance and comparison
-* Captures non-linear relationships
-
----
-
-## 📊 Model Evaluation
-
-### Metrics Used:
-
-* Accuracy
-* Precision
-* Recall
-* F1-score
-* Confusion Matrix
-* ROC Curve (AUC)
-
-### Results:
-
-* Logistic Regression Accuracy: ~73–79%
-* Improved Recall for churn after class balancing
-* ROC-AUC Score: **0.83** (Strong performance)
+- The dataset contains customer information such as:
+  - Gender
+  - Tenure
+  - Monthly Charges
+  - Total Charges
+  - Internet Service
+  - Contract Type
+  - Churn (Target variable)
 
 ---
 
-##  Feature Importance
+. Approach
 
-Used permutation importance to identify key features affecting churn:
-
-Top important features:
-
-* InternetService (Fiber optic)
-* Tenure
-* Monthly/Total Charges
-* Paperless Billing
-* Contract Type
+1. Data Loading & Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Feature Engineering
+4. Model Training (e.g., Logistic Regression / Random Forest)
+5. Model Evaluation
 
 ---
 
-##  Key Insights
+📈 Key Insights
 
-* Customers with **short tenure** are more likely to churn
-* **Fiber optic internet users** show higher churn rates
-* Higher **charges** increase churn probability
-* Long-term contracts reduce churn
-* Lack of additional services (e.g., tech support) increases churn
-
----
-
-##  Project Pipeline
-
-1. Data Loading
-2. Data Cleaning
-3. Encoding
-4. Train-Test Split
-5. Model Training
-6. Model Evaluation
-7. Model Improvement
-8. Feature Importance Analysis
+- Customers with short tenure are more likely to churn
+- Fiber optic users show higher churn rates
+- Paperless billing has a strong impact on churn
+- Long-term contracts reduce churn significantly
 
 ---
 
-##  Technologies Used
+. Model Performance
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Matplotlib / Seaborn
+- Accuracy: ~XX%
+- Feature Importance used to identify key drivers of churn
 
 ---
 
-##  Conclusion
+. Technologies Used
 
-This project demonstrates how machine learning can be used to predict customer churn and generate actionable business insights. The model performs well and can help companies improve customer retention strategies.
-
----
-
-##  Future Improvements
-
-* Hyperparameter tuning
-* Cross-validation
-* Deployment with UI (Streamlit)
-* Advanced models (XGBoost)
+- Python 🐍
+- Pandas
+- NumPy
+- Matplotlib / Seaborn
+- Scikit-learn
 
 ---
 
-## 👨‍💻 Author
+. How to Run
+
+1. Clone the repository
+2. Install required libraries
+3. Open "analysis.ipynb" in Jupyter Notebook
+4. Run all cells
+
+---
+
+. Sample Output
+
+Feature importance visualization showing top factors influencing churn:
+
+
+<img width="594" height="379" alt="image" src="https://github.com/user-attachments/assets/1c96e148-0420-4e01-8080-61fde27af651" />
+
+---
+
+. Future Improvements
+
+- Hyperparameter tuning
+- Try advanced models (XGBoost, Neural Networks)
+- Deploy as a web app
+
+---
+
+👨‍💻 Author
 
 Rakibul Hasan Turzo
+
+---
