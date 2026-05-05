@@ -54,7 +54,7 @@ customer-churn-ml/
 
 . Model Performance
 
-- Accuracy: ~XX%
+- Accuracy: 78.25%
 - Feature Importance used to identify key drivers of churn
 
 ---
